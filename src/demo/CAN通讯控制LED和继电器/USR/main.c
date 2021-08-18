@@ -1,3 +1,4 @@
+
 #include "pbdata.h"
 
 void BSP_Configuration(void);
@@ -15,7 +16,6 @@ int main(void)
 
     while(1)
     {
-       CAN_Demo();
        delay_ms(1000);
     }
 }
@@ -30,7 +30,9 @@ void BSP_Configuration(void)
 {
     CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1);  //配置内部高速振荡器（HSI）的分频器--1分频
 
-    CAN_Config();
+    JDQ_Init();
+    LED_Init();
+    CAN_Config();    //开启或者关闭指定的CAN中断源
     __enable_interrupt();//中断使能
 }
 
