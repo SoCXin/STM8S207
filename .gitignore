@@ -42,7 +42,7 @@ Doxyfile
 *.odg
 *.csv
 *.xml
-*.pdf
+# *.pdf
 *.xlsx
 *.zip
 *.xcf

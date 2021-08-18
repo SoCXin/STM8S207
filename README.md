@@ -31,7 +31,11 @@
 
 * LQFP32/LQFP44/LQFP48/LQFP64/LQFP80
 
-* [STM8CubeMX](https://www.st.com/zh/development-tools/stm8cubemx.html)
-* [SDCC编译器](http://sdcc.sourceforge.net/)
+#### 高可用度开源项目
+
+* [stm8ef](https://github.com/TG9541/stm8ef)
+* [platform-ststm8](https://github.com/platformio/platform-ststm8)
+* [sduino](https://github.com/tenbaht/sduino)
+
 
 ### [探索芯世界 www.SoC.xin](http://www.SoC.Xin)
