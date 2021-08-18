@@ -15,8 +15,8 @@ int main(void)
 
     while(1)
     {
-       CAN_Demo();
-       delay_ms(1000);
+      CAN_Demo();
+      delay_ms(1000);
     }
 }
 
