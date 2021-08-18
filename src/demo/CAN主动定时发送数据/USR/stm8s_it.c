@@ -29,7 +29,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s_it.h"
-extern u8_Rxdata;
+#include "pbdata.h"
+
 /** @addtogroup Template_Project
   * @{
   */
@@ -50,12 +51,12 @@ extern u8_Rxdata;
   * @retval
   * None
 */
-/*INTERRUPT_HANDLER(NonHandledInterrupt, 25)   // ×¢ÊÍµô
+INTERRUPT_HANDLER(NonHandledInterrupt, 25)
 {
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
-  
-}*/
+  */
+}
 #endif /*_COSMIC_*/
 
 /**
@@ -188,10 +189,7 @@ INTERRUPT_HANDLER(EXTI_PORTE_IRQHandler, 7)
   * @retval None
   */
  INTERRUPT_HANDLER(CAN_RX_IRQHandler, 8)
- {
-  /* In order to detect unexpected events during development,
-     it is recommended to set a breakpoint on the following instruction.
-  */
+ {  
  }
 
 /**
@@ -241,7 +239,6 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
-
 }
 
 #if defined (STM8S903) || defined (STM8AF622x)
@@ -436,20 +433,6 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 19)
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
-/*	u8 Res[8];
-	u8 i;
-
-	GPIO_WriteHigh(GPIOD, GPIO_PIN_0); 
-	
-	if(UART3_GetFlagStatus(UART3_FLAG_RXNE)!=RESET)
-	{
-		for(i=0;i<8;i++)
-		{
-			Res[i] =UART3_ReceiveData8();
-			u8_Rxdata=u8_Rxdata+(Res[i]<<i);
-		}
-		i=0;
-	}*/
  }
 #endif /* (STM8S208) || (STM8S207) || (STM8AF52Ax) || (STM8AF62Ax) */
 
@@ -461,7 +444,9 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 19)
   */
  INTERRUPT_HANDLER(ADC2_IRQHandler, 22)
  {
-		     //
+    /* In order to detect unexpected events during development,
+       it is recommended to set a breakpoint on the following instruction.
+    */
  }
 #else /* STM8S105 or STM8S103 or STM8S903 or STM8AF626x or STM8AF622x */
 /**
